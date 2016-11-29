@@ -1,0 +1,17 @@
+Small python script to decode the outdoor sensor signal of the Sempre weather station (as sold by ALDI in fall 2015)
+
+Requirements:
+-Sempre weather station (as sold by ALDI Germany in fall 2015)
+-A rtl-sdr stick
+-the rtl_fm command line tool
+-python3
+-gnu-coreutils
+-Linux (this can be easily changed to work on Windows though)
+
+Please run gqrx (or similar software) first and check the frequency your outdoor sensor uses. Then change the frequency in 'getTemperature.sh' accordingly.
+(You should start looking around 434MHz)
+
+Usage: 
+clone this repository and run 'getTemperature.sh'
+This will start listening for the signal. Data is written to /tmp. It will collect data for 60 seconds since the signal is send approximately once every minute.
+Next the decoder is called and finally the recorded data is deleted.
