@@ -15,3 +15,6 @@ Usage:
 clone this repository and run 'getTemperature.sh'
 This will start listening for the signal. Data is written to /tmp. It will collect data for 60 seconds since the signal is send approximately once every minute.
 Next the decoder is called and finally the recorded data is deleted.
+
+Troubleshooting:
+ValueError: invalid literal for int() with base 2: '' -> Try changing the gain (-g option in 'getTemperature.sh') Reasonable values are somewhere in between 20 and 60.
